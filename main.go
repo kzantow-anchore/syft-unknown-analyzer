@@ -4,22 +4,27 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/anchore/go-sync"
-	"github.com/anchore/syft/syft"
-	"github.com/anchore/syft/syft/cataloging"
-	"github.com/anchore/syft/syft/file"
+	"github.com/anchore/go-logger"
+	"github.com/anchore/go-logger/adapter/logrus"
+	"github.com/anchore/syft/syft/cataloging/filecataloging"
 	"io"
 	"net/http"
 	"os"
 	"path/filepath"
 	"slices"
 	"strings"
+	"time"
+
+	"github.com/anchore/go-sync"
+	"github.com/anchore/syft/syft"
+	"github.com/anchore/syft/syft/cataloging"
+	"github.com/anchore/syft/syft/file"
 )
 
 func main() {
-	startAt := 0
-	count := 30
-	parallelism := 4
+	startAt := 24
+	count := 10
+	parallelism := 2
 
 	ctx := context.Background()
 	executor := sync.NewExecutor(parallelism)
@@ -29,24 +34,37 @@ func main() {
 		panicOnError(os.MkdirAll(resultDir, 0700|os.ModeDir))
 	}
 
-	for i, source := range sourcesIterator() {
-		if i < startAt {
+	// set Syft statics
+	syft.SetLogger(getOrPanic(logrus.New(logrus.Config{
+		EnableConsole: true,
+		Level:         logger.DebugLevel,
+	})))
+
+	for idx, source := range sourcesIterator() {
+		if idx < startAt {
 			continue
 		}
-		if i > count {
+		if idx >= startAt+count {
 			break
 		}
 		executor.Execute(func() {
 			defer handlePanic()
-			fmt.Printf("Scanning: %s\n", source)
-			src := getOrPanic(syft.GetSource(ctx, source, syft.DefaultGetSourceConfig().WithSources("docker")))
+			fmt.Printf("Scanning: %v %s\n", idx, source)
+			startTime := time.Now()
+
+			src := getOrPanic(syft.GetSource(ctx, source, syft.DefaultGetSourceConfig().
+				WithSources("docker")))
 			defer func() { _ = src.Close() }()
 
-			sbom := getOrPanic(syft.CreateSBOM(ctx, src, syft.DefaultCreateSBOMConfig().WithUnknownsConfig(cataloging.UnknownsConfig{
-				RemoveWhenPackagesDefined:         false,
-				IncludeExecutablesWithoutPackages: true,
-				IncludeUnexpandedArchives:         true,
-			})))
+			cfg := syft.DefaultCreateSBOMConfig().
+				WithUnknownsConfig(cataloging.UnknownsConfig{
+					RemoveWhenPackagesDefined:         false,
+					IncludeExecutablesWithoutPackages: true,
+					IncludeUnexpandedArchives:         true,
+				}).
+				WithFilesConfig(filecataloging.DefaultConfig().WithHashers())
+
+			sbom := getOrPanic(syft.CreateSBOM(ctx, src, cfg))
 
 			// ignore unknowns we don't care about, since we are not removing unknowns with packages
 			filterUnknowns(sbom.Artifacts.Unknowns)
@@ -55,6 +73,7 @@ func main() {
 			_ = os.Remove(resultFilePath)
 
 			f := getOrPanic(os.OpenFile(resultFilePath, os.O_CREATE|os.O_RDWR, 0700))
+			defer func() { _ = f.Close() }()
 			writeLn := func(line string, args ...any) {
 				_ = getOrPanic(fmt.Fprintf(f, line, args...))
 				_ = getOrPanic(fmt.Fprintln(f))
@@ -65,6 +84,8 @@ func main() {
 					writeLn(`"%s","%s"`, coord.RealPath, err)
 				}
 			}
+
+			fmt.Printf("completed '%v' in %v\n", source, time.Now().Sub(startTime))
 		})
 	}
 
