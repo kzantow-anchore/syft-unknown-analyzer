@@ -17,11 +17,9 @@ import (
 )
 
 func main() {
-	sources := getOfficialImages()
-
 	startAt := 0
-	count := 10
-	parallelism := 2
+	count := 30
+	parallelism := 4
 
 	ctx := context.Background()
 	executor := sync.NewExecutor(parallelism)
@@ -31,9 +29,12 @@ func main() {
 		panicOnError(os.MkdirAll(resultDir, 0700|os.ModeDir))
 	}
 
-	for i, source := range sources[startAt:] {
-		if i > count {
+	for i, source := range sourcesIterator() {
+		if i < startAt {
 			continue
+		}
+		if i > count {
+			break
 		}
 		executor.Execute(func() {
 			defer handlePanic()
@@ -70,6 +71,27 @@ func main() {
 	executor.Wait()
 }
 
+func sourcesIterator() func(func(int, string) bool) {
+	idx := 0
+
+	return func(f func(int, string) bool) {
+		next := "https://hub.docker.com/v2/repositories/library/?page_size=100"
+		for {
+			var sources []string
+			sources, next = getImageList(next)
+			for _, source := range sources {
+				if !f(idx, source) {
+					return
+				}
+				idx++
+			}
+			if next == "" {
+				return
+			}
+		}
+	}
+}
+
 func filterUnknowns(unknowns map[file.Coordinates][]string) {
 	for k, errs := range unknowns {
 		errs = filterErrs(errs)
@@ -98,12 +120,14 @@ func handlePanic() {
 	}
 }
 
-func getOfficialImages() []string {
-	rsp := getOrPanic(http.Get("https://hub.docker.com/v2/repositories/library/?page_size=1000"))
+func getImageList(url string) ([]string, string) {
+	rsp := getOrPanic(http.Get(url))
 	defer func() { _ = rsp.Body.Close() }()
 
 	var results map[string]any
 	panicOnError(json.Unmarshal(getOrPanic(io.ReadAll(rsp.Body)), &results))
+
+	next, _ := results["next"].(string)
 
 	var images []string
 	for _, result := range results["results"].([]any) {
@@ -111,7 +135,7 @@ func getOfficialImages() []string {
 		images = append(images, result["name"].(string))
 	}
 	slices.Sort(images)
-	return images
+	return images, next
 }
 
 func getOrPanic[T any](value T, err error) T {
