@@ -1,0 +1,4 @@
+github.com/anchore/go-sync v0.0.0-20240306205607-3ee6b614d624 h1:uKEb2vI/rlEGhgLs9BzRwCQDUVXyB8ia9vULpm/Q9Rc=
+github.com/anchore/go-sync v0.0.0-20240306205607-3ee6b614d624/go.mod h1:4gU9pKhRjTOiU34grx5w5IM7YxZfLx+9TrrultzHThU=
+github.com/anchore/syft v1.11.2-0.20240826140759-cf9bb13f2bfe h1:4/o5kM/zT0ERokHfe86XvqNWUXEsqKU3qQAwzC3WHlI=
+github.com/anchore/syft v1.11.2-0.20240826140759-cf9bb13f2bfe/go.mod h1:Hk5BT8JX7SRvWuf/vWnDeK56GKojX+ngHxIUovRw3Xc=
