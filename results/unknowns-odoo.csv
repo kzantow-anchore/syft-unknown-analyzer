@@ -1,0 +1,5 @@
+"FILE","ERROR"
+"/usr/share/nodejs/tslib/modules/package.json","encountered package.json file without a name and/or version field"
+"/usr/local/lib/node_modules/rtlcss/node_modules/nanoid/non-secure/package.json","encountered package.json file without a name and/or version field"
+"/usr/local/lib/node_modules/rtlcss/node_modules/nanoid/url-alphabet/package.json","encountered package.json file without a name and/or version field"
+"/usr/local/lib/node_modules/rtlcss/node_modules/nanoid/async/package.json","encountered package.json file without a name and/or version field"

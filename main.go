@@ -23,8 +23,8 @@ import (
 
 func main() {
 	startAt := 24
-	count := 10
-	parallelism := 2
+	count := 1000
+	parallelism := 4
 
 	ctx := context.Background()
 	executor := sync.NewExecutor(parallelism)
@@ -85,7 +85,7 @@ func main() {
 				}
 			}
 
-			fmt.Printf("completed '%v' in %v\n", source, time.Now().Sub(startTime))
+			fmt.Printf("completed %s '%v' in %v\n", idx, source, time.Now().Sub(startTime))
 		})
 	}
 

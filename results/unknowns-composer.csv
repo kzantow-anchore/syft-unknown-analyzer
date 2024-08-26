@@ -1,0 +1,7 @@
+"FILE","ERROR"
+"/usr/local/bin/phpdbg","no package identified in executable file"
+"/usr/local/lib/php/extensions/no-debug-non-zts-20230831/opcache.so","no package identified in executable file"
+"/usr/local/lib/php/extensions/no-debug-non-zts-20230831/zip.so","no package identified in executable file"
+"/usr/local/lib/php/extensions/no-debug-non-zts-20230831/sodium.so","no package identified in executable file"
+"/usr/local/lib/php/extensions/no-debug-non-zts-20230831/bz2.so","no package identified in executable file"
+"/usr/local/bin/php-cgi","no package identified in executable file"
