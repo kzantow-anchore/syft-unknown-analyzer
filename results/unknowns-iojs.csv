@@ -1,4 +1,4 @@
 "FILE","ERROR"
 "/usr/local/bin/iojs","no package identified in executable file"
-"/var/lib/dpkg/info/bash.preinst","no package identified in executable file"
 "/usr/local/lib/node_modules/npm/node_modules/read-package-json/node_modules/json-parse-helpfulerror/node_modules/jju/benchmark/package.json","encountered package.json file without a name and/or version field"
+"/var/lib/dpkg/info/bash.preinst","no package identified in executable file"

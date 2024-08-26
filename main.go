@@ -4,9 +4,6 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/anchore/go-logger"
-	"github.com/anchore/go-logger/adapter/logrus"
-	"github.com/anchore/syft/syft/cataloging/filecataloging"
 	"io"
 	"net/http"
 	"os"
@@ -15,14 +12,19 @@ import (
 	"strings"
 	"time"
 
+	"golang.org/x/exp/maps"
+
+	"github.com/anchore/go-logger"
+	"github.com/anchore/go-logger/adapter/logrus"
 	"github.com/anchore/go-sync"
 	"github.com/anchore/syft/syft"
 	"github.com/anchore/syft/syft/cataloging"
+	"github.com/anchore/syft/syft/cataloging/filecataloging"
 	"github.com/anchore/syft/syft/file"
 )
 
 func main() {
-	startAt := 24
+	startAt := 0
 	count := 1000
 	parallelism := 4
 
@@ -78,14 +80,22 @@ func main() {
 				_ = getOrPanic(fmt.Fprintf(f, line, args...))
 				_ = getOrPanic(fmt.Fprintln(f))
 			}
+
+			unknownMap := sbom.Artifacts.Unknowns
+			keys := maps.Keys(unknownMap)
+			slices.SortFunc(keys, func(a, b file.Coordinates) int {
+				return strings.Compare(a.RealPath, b.RealPath)
+			})
+
 			writeLn(`"FILE","ERROR"`)
-			for coord, errs := range sbom.Artifacts.Unknowns {
+			for _, coord := range keys {
+				errs := unknownMap[coord]
 				for _, err := range errs {
 					writeLn(`"%s","%s"`, coord.RealPath, err)
 				}
 			}
 
-			fmt.Printf("completed %s '%v' in %v\n", idx, source, time.Now().Sub(startTime))
+			fmt.Printf("completed %v '%v' in %v\n", idx, source, time.Now().Sub(startTime))
 		})
 	}
 

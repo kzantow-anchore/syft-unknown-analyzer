@@ -6,6 +6,7 @@ require (
 	github.com/anchore/go-logger v0.0.0-20230725134548-c21dafa1ec5a
 	github.com/anchore/go-sync v0.0.0-20240306205607-3ee6b614d624
 	github.com/anchore/syft v1.11.2-0.20240826140759-cf9bb13f2bfe
+	golang.org/x/exp v0.0.0-20231108232855-2478ac86f678
 )
 
 require (
@@ -173,7 +174,6 @@ require (
 	go.uber.org/atomic v1.9.0 // indirect
 	go.uber.org/multierr v1.9.0 // indirect
 	golang.org/x/crypto v0.26.0 // indirect
-	golang.org/x/exp v0.0.0-20231108232855-2478ac86f678 // indirect
 	golang.org/x/mod v0.20.0 // indirect
 	golang.org/x/net v0.28.0 // indirect
 	golang.org/x/sync v0.8.0 // indirect

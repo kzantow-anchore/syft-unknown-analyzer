@@ -1,4 +1,4 @@
 "FILE","ERROR"
-"/usr/sbin/unitd-debug","no package identified in executable file"
 "/usr/sbin/unitd","no package identified in executable file"
+"/usr/sbin/unitd-debug","no package identified in executable file"
 "/var/lib/dpkg/info/bash.preinst","no package identified in executable file"
