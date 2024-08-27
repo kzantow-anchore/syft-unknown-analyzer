@@ -7,6 +7,7 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"os/exec"
 	"path/filepath"
 	"slices"
 	"strings"
@@ -27,7 +28,7 @@ import (
 func main() {
 	startAt := 0
 	count := 1000
-	parallelism := 10
+	parallelism := 4
 
 	ctx := context.Background()
 	executor := sync.NewExecutor(parallelism)
@@ -44,6 +45,8 @@ func main() {
 	})))
 
 	for idx, source := range sourcesIterator() {
+		ref := source + ":latest"
+
 		if idx < startAt {
 			continue
 		}
@@ -52,10 +55,10 @@ func main() {
 		}
 		executor.Execute(func() {
 			defer handlePanic()
-			fmt.Printf("Scanning: %v %s\n", idx, source)
+			fmt.Printf("Scanning: %v %s\n", idx, ref)
 			startTime := time.Now()
 
-			src := getOrPanic(syft.GetSource(ctx, source, syft.DefaultGetSourceConfig().
+			src := getOrPanic(syft.GetSource(ctx, ref, syft.DefaultGetSourceConfig().
 				WithSources("docker")))
 			defer func() { _ = src.Close() }()
 
@@ -72,10 +75,10 @@ func main() {
 			// ignore unknowns we don't care about, since we are not removing unknowns with packages
 			filterUnknowns(sbom.Artifacts.Unknowns)
 
-			resultFilePath := filepath.Join(resultDir, fmt.Sprintf("unknowns-%s.csv", source))
+			resultFilePath := filepath.Join(resultDir, fmt.Sprintf("unknowns-%s.csv", strings.ReplaceAll(ref, ":", "_")))
 			_ = os.Remove(resultFilePath)
 
-			f := getOrPanic(os.OpenFile(resultFilePath, os.O_CREATE|os.O_RDWR, 0700))
+			f := getOrPanic(os.OpenFile(resultFilePath, os.O_CREATE|os.O_RDWR, 0600))
 			defer func() { _ = f.Close() }()
 			writeLn := func(line string, args ...any) {
 				_ = getOrPanic(fmt.Fprintf(f, line, args...))
@@ -96,7 +99,11 @@ func main() {
 				}
 			}
 
-			fmt.Printf("completed %v '%v' in %v\n", idx, source, time.Now().Sub(startTime))
+			fmt.Printf("completed %v '%v' in %v\n", idx, ref, time.Now().Sub(startTime))
+
+			img := getOrPanic(run("docker", "images", "-aq", "-f", "reference="+ref))
+			img = strings.TrimSpace(img)
+			_ = getOrPanic(run("docker", "rmi", "-f", img))
 		})
 	}
 
@@ -172,6 +179,12 @@ func getImageList(url string) ([]string, string) {
 	}
 	slices.Sort(images)
 	return images, next
+}
+
+func run(command ...string) (string, error) {
+	cmd := exec.Command(command[0], command[1:]...)
+	out, err := cmd.CombinedOutput()
+	return string(out), err
 }
 
 func getOrPanic[T any](value T, err error) T {

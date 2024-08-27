@@ -1,0 +1,8 @@
+"FILE","ERROR"
+"/usr/bin/arangobench","no package identified in executable file"
+"/usr/bin/arangodump","no package identified in executable file"
+"/usr/bin/arangoexport","no package identified in executable file"
+"/usr/bin/arangoimport","no package identified in executable file"
+"/usr/bin/arangorestore","no package identified in executable file"
+"/usr/bin/arangovpack","no package identified in executable file"
+"/usr/sbin/arangod","no package identified in executable file"

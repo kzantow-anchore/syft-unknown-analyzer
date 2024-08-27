@@ -1,8 +1,0 @@
-"FILE","ERROR"
-"/usr/local/lib/php/extensions/no-debug-non-zts-20220829/sodium.so","no package identified in executable file"
-"/usr/local/lib/php/extensions/no-debug-non-zts-20220829/bz2.so","no package identified in executable file"
-"/usr/local/lib/php/extensions/no-debug-non-zts-20220829/mysqli.so","no package identified in executable file"
-"/usr/local/lib/php/extensions/no-debug-non-zts-20220829/opcache.so","no package identified in executable file"
-"/usr/local/lib/php/extensions/no-debug-non-zts-20220829/zip.so","no package identified in executable file"
-"/usr/local/lib/php/extensions/no-debug-non-zts-20220829/gd.so","no package identified in executable file"
-"/usr/local/lib/php/extensions/no-debug-non-zts-20220829/bcmath.so","no package identified in executable file"
