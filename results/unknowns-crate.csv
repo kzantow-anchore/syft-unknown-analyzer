@@ -5,7 +5,7 @@
 "/usr/lib64/libpsx.so.2.48","no package identified in executable file"
 "/usr/lib64/security/pam_timestamp.so","no package identified in executable file"
 "/usr/lib64/security/pam_cap.so","no package identified in executable file"
-"/var/lib/rpm/rpmdb.sqlite","failed to open sqlite3: sql: unknown driver "sqlite" (forgotten import?)"
+"/var/lib/rpm/rpmdb.sqlite","failed to open sqlite3: sql: unknown driver ""sqlite"" (forgotten import?)"
 "/usr/bin/sed","no package identified in executable file"
 "/usr/lib64/audit/sotruss-lib.so","no package identified in executable file"
 "/usr/lib64/libtss2-fapi.so.1.0.0","no package identified in executable file"

@@ -36,4 +36,4 @@
 "/usr/sbin/iconvconfig","no package identified in executable file"
 "/usr/sbin/ldconfig","no package identified in executable file"
 "/usr/sbin/zic","no package identified in executable file"
-"/var/lib/rpm/rpmdb.sqlite","failed to open sqlite3: sql: unknown driver "sqlite" (forgotten import?)"
+"/var/lib/rpm/rpmdb.sqlite","failed to open sqlite3: sql: unknown driver ""sqlite"" (forgotten import?)"

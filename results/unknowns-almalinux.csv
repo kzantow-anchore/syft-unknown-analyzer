@@ -637,4 +637,4 @@
 "/usr/sbin/wipefs","no package identified in executable file"
 "/usr/sbin/zic","no package identified in executable file"
 "/usr/sbin/zramctl","no package identified in executable file"
-"/var/lib/rpm/rpmdb.sqlite","failed to open sqlite3: sql: unknown driver "sqlite" (forgotten import?)"
+"/var/lib/rpm/rpmdb.sqlite","failed to open sqlite3: sql: unknown driver ""sqlite"" (forgotten import?)"

@@ -151,7 +151,7 @@
 "/usr/lib/libzstd.so.1.5.5","no package identified in executable file"
 "/usr/lib/ossl-modules/jitterentropy.so","no package identified in executable file"
 "/usr/lib/ossl-modules/legacy.so","no package identified in executable file"
-"/usr/lib/sysimage/rpm/rpmdb.sqlite","failed to open sqlite3: sql: unknown driver "sqlite" (forgotten import?)"
+"/usr/lib/sysimage/rpm/rpmdb.sqlite","failed to open sqlite3: sql: unknown driver ""sqlite"" (forgotten import?)"
 "/usr/lib/tdnf/tdnf-history-util","no package identified in executable file"
 "/usr/sbin/capsh","no package identified in executable file"
 "/usr/sbin/getcap","no package identified in executable file"

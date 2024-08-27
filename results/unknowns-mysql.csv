@@ -497,7 +497,7 @@
 "/usr/lib/mysqlsh/libabsl_status.so","no package identified in executable file"
 "/usr/lib64/python3.9/lib-dynload/_asyncio.cpython-39-x86_64-linux-gnu.so","no package identified in executable file"
 "/usr/lib64/python3.9/lib-dynload/_dbm.cpython-39-x86_64-linux-gnu.so","no package identified in executable file"
-"/var/lib/rpm/rpmdb.sqlite","failed to open sqlite3: sql: unknown driver "sqlite" (forgotten import?)"
+"/var/lib/rpm/rpmdb.sqlite","failed to open sqlite3: sql: unknown driver ""sqlite"" (forgotten import?)"
 "/usr/lib64/mysql/private/libabsl_civil_time.so","no package identified in executable file"
 "/usr/lib64/mysql/private/libabsl_time.so","no package identified in executable file"
 "/usr/bin/rpm2cpio","no package identified in executable file"

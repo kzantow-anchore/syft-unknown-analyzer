@@ -18,7 +18,7 @@
 "/usr/bin/sudo","no package identified in executable file"
 "/usr/bin/sudoreplay","no package identified in executable file"
 "/usr/bin/zdump","no package identified in executable file"
-"/usr/lib/sysimage/rpm/rpmdb.sqlite","failed to open sqlite3: sql: unknown driver "sqlite" (forgotten import?)"
+"/usr/lib/sysimage/rpm/rpmdb.sqlite","failed to open sqlite3: sql: unknown driver ""sqlite"" (forgotten import?)"
 "/usr/lib64/audit/sotruss-lib.so","no package identified in executable file"
 "/usr/lib64/gconv/ANSI_X3.110.so","no package identified in executable file"
 "/usr/lib64/gconv/CP1252.so","no package identified in executable file"
