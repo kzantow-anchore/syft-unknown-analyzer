@@ -12,6 +12,7 @@ import (
 	"strings"
 	"time"
 
+	_ "github.com/glebarez/sqlite"
 	"golang.org/x/exp/maps"
 
 	"github.com/anchore/go-logger"
@@ -26,7 +27,7 @@ import (
 func main() {
 	startAt := 0
 	count := 1000
-	parallelism := 4
+	parallelism := 10
 
 	ctx := context.Background()
 	executor := sync.NewExecutor(parallelism)
@@ -91,7 +92,7 @@ func main() {
 			for _, coord := range keys {
 				errs := unknownMap[coord]
 				for _, err := range errs {
-					writeLn(`"%s","%s"`, coord.RealPath, err)
+					writeLn(`"%s","%s"`, escapeQuotedCsv(coord.RealPath), escapeQuotedCsv(err))
 				}
 			}
 
@@ -100,6 +101,10 @@ func main() {
 	}
 
 	executor.Wait()
+}
+
+func escapeQuotedCsv(value string) string {
+	return strings.ReplaceAll(value, "\"", "\"\"")
 }
 
 func sourcesIterator() func(func(int, string) bool) {
