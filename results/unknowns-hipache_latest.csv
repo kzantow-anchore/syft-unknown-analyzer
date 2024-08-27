@@ -1,3 +1,3 @@
-"FILE","ERROR"
-"/sbin/initctl.distrib","no package identified in executable file"
-"/var/lib/dpkg/info/bash.preinst","no package identified in executable file"
+"IMAGE",FILE","ERROR"
+"hipache:latest","/sbin/initctl.distrib","no package identified in executable file"
+"hipache:latest","/var/lib/dpkg/info/bash.preinst","no package identified in executable file"

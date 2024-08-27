@@ -1,2 +1,2 @@
-"FILE","ERROR"
-"/hello","no package identified in executable file"
+"IMAGE",FILE","ERROR"
+"hola-mundo:latest","/hello","no package identified in executable file"

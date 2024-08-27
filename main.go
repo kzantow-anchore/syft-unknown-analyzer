@@ -1,6 +1,7 @@
 package main
 
 import (
+	"cmp"
 	"context"
 	"encoding/json"
 	"fmt"
@@ -44,6 +45,9 @@ func main() {
 		Level:         logger.DebugLevel,
 	})))
 
+	startTime := time.Now()
+	scanTimes := map[string]time.Duration{}
+
 	for idx, source := range sourcesIterator() {
 		ref := source + ":latest"
 
@@ -56,7 +60,7 @@ func main() {
 		executor.Execute(func() {
 			defer handlePanic()
 			fmt.Printf("Scanning: %v %s\n", idx, ref)
-			startTime := time.Now()
+			imageStartTime := time.Now()
 
 			src := getOrPanic(syft.GetSource(ctx, ref, syft.DefaultGetSourceConfig().
 				WithSources("docker")))
@@ -78,6 +82,11 @@ func main() {
 			resultFilePath := filepath.Join(resultDir, fmt.Sprintf("unknowns-%s.csv", strings.ReplaceAll(ref, ":", "_")))
 			_ = os.Remove(resultFilePath)
 
+			unknownMap := sbom.Artifacts.Unknowns
+			if len(unknownMap) == 0 {
+				return
+			}
+
 			f := getOrPanic(os.OpenFile(resultFilePath, os.O_CREATE|os.O_RDWR, 0600))
 			defer func() { _ = f.Close() }()
 			writeLn := func(line string, args ...any) {
@@ -85,29 +94,47 @@ func main() {
 				_ = getOrPanic(fmt.Fprintln(f))
 			}
 
-			unknownMap := sbom.Artifacts.Unknowns
 			keys := maps.Keys(unknownMap)
 			slices.SortFunc(keys, func(a, b file.Coordinates) int {
 				return strings.Compare(a.RealPath, b.RealPath)
 			})
 
-			writeLn(`"FILE","ERROR"`)
+			writeLn(`"IMAGE",FILE","ERROR"`)
 			for _, coord := range keys {
 				errs := unknownMap[coord]
 				for _, err := range errs {
-					writeLn(`"%s","%s"`, escapeQuotedCsv(coord.RealPath), escapeQuotedCsv(err))
+					writeLn(`"%s","%s","%s"`, escapeQuotedCsv(ref), escapeQuotedCsv(coord.RealPath), escapeQuotedCsv(err))
 				}
 			}
 
-			fmt.Printf("completed %v '%v' in %v\n", idx, ref, time.Now().Sub(startTime))
+			scanTime := time.Now().Sub(imageStartTime)
+			scanTimes[ref] = scanTime
+			fmt.Printf("completed %v '%v' in %v\n", idx, ref, scanTime)
 
-			img := getOrPanic(run("docker", "images", "-aq", "-f", "reference="+ref))
+			img := getOrPanic(run("docker", "image", "list", "-aq", "-f", "reference="+ref))
 			img = strings.TrimSpace(img)
-			_ = getOrPanic(run("docker", "rmi", "-f", img))
+			_ = getOrPanic(run("docker", "image", "rm", "-f", img))
 		})
 	}
 
 	executor.Wait()
+
+	for ref, duration := range sorted(scanTimes) {
+		fmt.Printf("%v\t%v\n", ref, duration)
+	}
+	fmt.Printf("all completed in %v\n", time.Now().Sub(startTime))
+}
+
+func sorted[K cmp.Ordered, V any](values map[K]V) func(func(K, V) bool) {
+	keys := maps.Keys(values)
+	slices.Sort(keys)
+	return func(f func(K, V) bool) {
+		for _, key := range keys {
+			if !f(key, values[key]) {
+				return
+			}
+		}
+	}
 }
 
 func escapeQuotedCsv(value string) string {

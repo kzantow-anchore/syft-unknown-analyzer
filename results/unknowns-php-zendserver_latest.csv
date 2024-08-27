@@ -1,4 +1,4 @@
-"FILE","ERROR"
-"/usr/local/bin/nothing","no package identified in executable file"
-"/var/lib/dpkg/info/bash.preinst","no package identified in executable file"
-"/var/lib/dpkg/info/dash.preinst","no package identified in executable file"
+"IMAGE",FILE","ERROR"
+"php-zendserver:latest","/usr/local/bin/nothing","no package identified in executable file"
+"php-zendserver:latest","/var/lib/dpkg/info/bash.preinst","no package identified in executable file"
+"php-zendserver:latest","/var/lib/dpkg/info/dash.preinst","no package identified in executable file"

@@ -1,3 +1,3 @@
-"FILE","ERROR"
-"/usr/local/bin/redis-benchmark","no package identified in executable file"
-"/usr/local/bin/redis-cli","no package identified in executable file"
+"IMAGE",FILE","ERROR"
+"redis:latest","/usr/local/bin/redis-benchmark","no package identified in executable file"
+"redis:latest","/usr/local/bin/redis-cli","no package identified in executable file"
