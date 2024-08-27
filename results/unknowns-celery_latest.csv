@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "celery:latest","/usr/local/lib/libpython3.so","no package identified in executable file"
 "celery:latest","/usr/local/lib/python3.5/distutils/command/wininst-10.0-amd64.exe","unable to find PE name in file"
 "celery:latest","/usr/local/lib/python3.5/distutils/command/wininst-10.0-amd64.exe","no package identified in executable file"

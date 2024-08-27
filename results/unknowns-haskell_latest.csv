@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "haskell:latest","/opt/ghc/9.10.1/lib/ghc-9.10.1/bin/ghc-9.10.1","no package identified in executable file"
 "haskell:latest","/opt/ghc/9.10.1/lib/ghc-9.10.1/bin/ghc-iserv-dyn-ghc-9.10.1","no package identified in executable file"
 "haskell:latest","/opt/ghc/9.10.1/lib/ghc-9.10.1/bin/ghc-iserv-ghc-9.10.1","no package identified in executable file"

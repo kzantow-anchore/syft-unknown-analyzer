@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "elixir:latest","/usr/local/lib/erlang/bin/ct_run","no package identified in executable file"
 "elixir:latest","/usr/local/lib/erlang/bin/dialyzer","no package identified in executable file"
 "elixir:latest","/usr/local/lib/erlang/bin/erl_call","no package identified in executable file"

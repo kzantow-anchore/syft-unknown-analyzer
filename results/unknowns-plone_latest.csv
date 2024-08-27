@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "plone:latest","/plone/buildout-cache/eggs/cp38/AccessControl-4.4-py3.8-linux-x86_64.egg/AccessControl/cAccessControl.cpython-38-x86_64-linux-gnu.so","no package identified in executable file"
 "plone:latest","/plone/buildout-cache/eggs/cp38/Acquisition-4.13-py3.8-linux-x86_64.egg/Acquisition/_Acquisition.cpython-38-x86_64-linux-gnu.so","no package identified in executable file"
 "plone:latest","/plone/buildout-cache/eggs/cp38/BTrees-4.11.3-py3.8-linux-x86_64.egg/BTrees/_IFBTree.cpython-38-x86_64-linux-gnu.so","no package identified in executable file"

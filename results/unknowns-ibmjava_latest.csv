@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "ibmjava:latest","/opt/ibm/java/jre/bin/classic/libjvm.so","no package identified in executable file"
 "ibmjava:latest","/opt/ibm/java/jre/bin/ikeycmd","no package identified in executable file"
 "ibmjava:latest","/opt/ibm/java/jre/bin/ikeyman","no package identified in executable file"

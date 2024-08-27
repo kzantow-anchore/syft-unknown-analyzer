@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "adoptopenjdk:latest","/opt/java/openjdk/bin/jaotc","no package identified in executable file"
 "adoptopenjdk:latest","/opt/java/openjdk/bin/jar","no package identified in executable file"
 "adoptopenjdk:latest","/opt/java/openjdk/bin/jarsigner","no package identified in executable file"

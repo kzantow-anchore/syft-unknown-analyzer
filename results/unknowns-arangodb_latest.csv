@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "arangodb:latest","/usr/bin/arangobench","no package identified in executable file"
 "arangodb:latest","/usr/bin/arangodump","no package identified in executable file"
 "arangodb:latest","/usr/bin/arangoexport","no package identified in executable file"

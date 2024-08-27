@@ -1,2 +1,2 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "couchdb:latest","/var/lib/dpkg/info/bash.preinst","no package identified in executable file"

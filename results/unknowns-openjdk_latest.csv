@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "openjdk:latest","/usr/java/openjdk-18/bin/jar","no package identified in executable file"
 "openjdk:latest","/usr/java/openjdk-18/bin/jarsigner","no package identified in executable file"
 "openjdk:latest","/usr/java/openjdk-18/bin/javac","no package identified in executable file"

@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "fluentd:latest","/usr/lib/ruby/gems/3.2.0/extensions/x86_64-linux-musl/3.2.0/bigdecimal-1.4.4/bigdecimal.so","no package identified in executable file"
 "fluentd:latest","/usr/lib/ruby/gems/3.2.0/extensions/x86_64-linux-musl/3.2.0/cool.io-1.8.1/cool.io_ext.so","no package identified in executable file"
 "fluentd:latest","/usr/lib/ruby/gems/3.2.0/extensions/x86_64-linux-musl/3.2.0/cool.io-1.8.1/iobuffer_ext.so","no package identified in executable file"

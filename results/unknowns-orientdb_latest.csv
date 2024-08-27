@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "orientdb:latest","/opt/java/openjdk/bin/appletviewer","no package identified in executable file"
 "orientdb:latest","/opt/java/openjdk/bin/clhsdb","no package identified in executable file"
 "orientdb:latest","/opt/java/openjdk/bin/extcheck","no package identified in executable file"

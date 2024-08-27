@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "haxe:latest","/usr/local/bin/haxe","no package identified in executable file"
 "haxe:latest","/usr/local/bin/haxelib","no package identified in executable file"
 "haxe:latest","/usr/local/bin/neko","no package identified in executable file"

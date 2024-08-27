@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "swift:latest","/usr/bin/clang-15","no package identified in executable file"
 "swift:latest","/usr/bin/clangd","no package identified in executable file"
 "swift:latest","/usr/bin/docc","no package identified in executable file"

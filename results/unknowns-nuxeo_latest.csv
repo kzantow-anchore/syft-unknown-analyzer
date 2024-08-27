@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "nuxeo:latest","/opt/nuxeo/server/nxserver/lib/javax.inject-1.jar","no package identified in archive"
 "nuxeo:latest","/usr/local/openjdk-8/bin/appletviewer","no package identified in executable file"
 "nuxeo:latest","/usr/local/openjdk-8/bin/clhsdb","no package identified in executable file"

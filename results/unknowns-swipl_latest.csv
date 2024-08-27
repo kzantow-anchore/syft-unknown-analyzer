@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "swipl:latest","/usr/lib/swipl/bin/x86_64-linux/swipl-ld","no package identified in executable file"
 "swipl:latest","/usr/lib/swipl/lib/x86_64-linux/archive4pl.so","no package identified in executable file"
 "swipl:latest","/usr/lib/swipl/lib/x86_64-linux/bdb4pl.so","no package identified in executable file"

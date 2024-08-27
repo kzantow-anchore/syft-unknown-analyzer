@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "gcc:latest","/usr/local/bin/c++","no package identified in executable file"
 "gcc:latest","/usr/local/bin/cpp","no package identified in executable file"
 "gcc:latest","/usr/local/bin/gcc-ar","no package identified in executable file"

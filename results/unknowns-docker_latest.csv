@@ -1,2 +1,2 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "docker:latest","/usr/local/bin/docker-init","no package identified in executable file"

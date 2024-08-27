@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "httpd:latest","/usr/local/apache2/bin/ab","no package identified in executable file"
 "httpd:latest","/usr/local/apache2/bin/checkgid","no package identified in executable file"
 "httpd:latest","/usr/local/apache2/bin/fcgistarter","no package identified in executable file"

@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "geonetwork:latest","/opt/geonetwork/WEB-INF/lib/balanced-match-1.0.2.jar","no package identified in archive"
 "geonetwork:latest","/opt/geonetwork/WEB-INF/lib/brace-expansion-1.1.11.jar","no package identified in archive"
 "geonetwork:latest","/opt/geonetwork/WEB-INF/lib/concat-map-0.0.1.jar","no package identified in archive"

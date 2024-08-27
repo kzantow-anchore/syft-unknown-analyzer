@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "crate:latest","/crate/jdk/bin/jcmd","no package identified in executable file"
 "crate:latest","/crate/jdk/bin/jfr","no package identified in executable file"
 "crate:latest","/crate/jdk/bin/jinfo","no package identified in executable file"

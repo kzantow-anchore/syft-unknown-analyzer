@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "teamspeak:latest","/opt/ts3server/ts3server","no package identified in executable file"
 "teamspeak:latest","/opt/ts3server/tsdns/tsdnsserver","no package identified in executable file"
 "teamspeak:latest","/usr/local/lib/libmariadb.so.2","no package identified in executable file"

@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "glassfish:latest","/usr/local/glassfish4/javadb/lib/derby.war","no package identified in archive"
 "glassfish:latest","/usr/local/glassfish4/mq/bin/imqadmin.exe","unable to find PE name in file"
 "glassfish:latest","/usr/local/glassfish4/mq/bin/imqadmin.exe","no package identified in executable file"

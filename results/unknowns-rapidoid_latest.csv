@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "rapidoid:latest","/usr/local/openjdk-8/bin/jjs","no package identified in executable file"
 "rapidoid:latest","/usr/local/openjdk-8/bin/keytool","no package identified in executable file"
 "rapidoid:latest","/usr/local/openjdk-8/bin/orbd","no package identified in executable file"

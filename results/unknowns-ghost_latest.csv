@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "ghost:latest","/usr/local/lib/node_modules/ghost-cli/node_modules/process-exists/node_modules/ps-list/fastlist.exe","unable to find PE name in file"
 "ghost:latest","/usr/local/lib/node_modules/ghost-cli/node_modules/process-exists/node_modules/ps-list/fastlist.exe","no package identified in executable file"
 "ghost:latest","/usr/local/lib/node_modules/ghost-cli/node_modules/ps-list/vendor/fastlist-0.3.0-x64.exe","unable to find PE name in file"

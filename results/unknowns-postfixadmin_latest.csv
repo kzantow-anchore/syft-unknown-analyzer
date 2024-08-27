@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "postfixadmin:latest","/usr/local/lib/php/extensions/no-debug-non-zts-20210902/imap.so","no package identified in executable file"
 "postfixadmin:latest","/usr/local/lib/php/extensions/no-debug-non-zts-20210902/opcache.so","no package identified in executable file"
 "postfixadmin:latest","/usr/local/lib/php/extensions/no-debug-non-zts-20210902/pdo_mysql.so","no package identified in executable file"

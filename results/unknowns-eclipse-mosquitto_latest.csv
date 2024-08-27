@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "eclipse-mosquitto:latest","/usr/bin/mosquitto_ctrl","no package identified in executable file"
 "eclipse-mosquitto:latest","/usr/bin/mosquitto_passwd","no package identified in executable file"
 "eclipse-mosquitto:latest","/usr/bin/mosquitto_pub","no package identified in executable file"

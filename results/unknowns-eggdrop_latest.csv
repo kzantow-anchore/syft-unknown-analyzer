@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "eggdrop:latest","/home/eggdrop/eggdrop/eggdrop-1.9.5","no package identified in executable file"
 "eggdrop:latest","/home/eggdrop/eggdrop/modules-1.9.5/assoc.so","no package identified in executable file"
 "eggdrop:latest","/home/eggdrop/eggdrop/modules-1.9.5/blowfish.so","no package identified in executable file"

@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "golang:latest","/usr/local/go/src/archive/zip/testdata/comment-truncated.zip","unable to read files from java archive: zip: not a valid zip file"
 "golang:latest","/usr/local/go/src/archive/zip/testdata/test-badbase.zip","unable to read files from java archive: zip: not a valid zip file"
 "golang:latest","/usr/local/go/src/archive/zip/testdata/test-baddirsz.zip","unable to read files from java archive: zip: not a valid zip file"

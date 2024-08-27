@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "varnish:latest","/usr/lib/varnish/vmods/libvmod_accept.so","no package identified in executable file"
 "varnish:latest","/usr/lib/varnish/vmods/libvmod_bodyaccess.so","no package identified in executable file"
 "varnish:latest","/usr/lib/varnish/vmods/libvmod_dynamic.so","no package identified in executable file"

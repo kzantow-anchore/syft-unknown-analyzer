@@ -99,7 +99,7 @@ func main() {
 				return strings.Compare(a.RealPath, b.RealPath)
 			})
 
-			writeLn(`"IMAGE",FILE","ERROR"`)
+			writeLn(`"IMAGE","FILE","ERROR"`)
 			for _, coord := range keys {
 				errs := unknownMap[coord]
 				for _, err := range errs {

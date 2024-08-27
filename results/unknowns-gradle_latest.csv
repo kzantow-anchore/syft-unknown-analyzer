@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "gradle:latest","/home/gradle/.gradle/native/c067742578af261105cb4f569cf0c3c89f3d7b1fecec35dd04571415982c5e48/linux-amd64-ncurses5/libnative-platform-curses.so","no package identified in executable file"
 "gradle:latest","/home/gradle/.gradle/native/c067742578af261105cb4f569cf0c3c89f3d7b1fecec35dd04571415982c5e48/linux-amd64-ncurses6/libnative-platform-curses.so","no package identified in executable file"
 "gradle:latest","/home/gradle/.gradle/native/c067742578af261105cb4f569cf0c3c89f3d7b1fecec35dd04571415982c5e48/linux-amd64/libnative-platform.so","no package identified in executable file"

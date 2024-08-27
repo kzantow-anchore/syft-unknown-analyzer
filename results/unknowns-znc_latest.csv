@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "znc:latest","/opt/znc/bin/znc","no package identified in executable file"
 "znc:latest","/opt/znc/lib/znc/admindebug.so","no package identified in executable file"
 "znc:latest","/opt/znc/lib/znc/adminlog.so","no package identified in executable file"

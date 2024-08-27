@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "redmine:latest","/usr/local/bundle/extensions/x86_64-linux/3.2.0/commonmarker-0.23.10/commonmarker/commonmarker.so","no package identified in executable file"
 "redmine:latest","/usr/local/bundle/extensions/x86_64-linux/3.2.0/date-3.3.4/date_core.so","no package identified in executable file"
 "redmine:latest","/usr/local/bundle/extensions/x86_64-linux/3.2.0/mysql2-0.5.6/mysql2/mysql2.so","no package identified in executable file"

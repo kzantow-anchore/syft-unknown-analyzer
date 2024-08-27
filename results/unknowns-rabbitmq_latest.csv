@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "rabbitmq:latest","/opt/erlang/lib/erlang/bin/ct_run","no package identified in executable file"
 "rabbitmq:latest","/opt/erlang/lib/erlang/bin/dialyzer","no package identified in executable file"
 "rabbitmq:latest","/opt/erlang/lib/erlang/bin/erl_call","no package identified in executable file"

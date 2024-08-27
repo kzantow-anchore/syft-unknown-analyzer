@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "rocket.chat:latest","/app/bundle/programs/server/node_modules/fibers/bin/darwin-x64-72/fibers.node","rust cataloger: unable to read dependency information: unknown file format"
 "rocket.chat:latest","/app/bundle/programs/server/node_modules/fibers/bin/darwin-x64-72/fibers.node","no package identified in executable file"
 "rocket.chat:latest","/app/bundle/programs/server/node_modules/fibers/bin/darwin-x64-83/fibers.node","rust cataloger: unable to read dependency information: unknown file format"

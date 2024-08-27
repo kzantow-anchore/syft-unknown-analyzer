@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "pypy:latest","/opt/pypy/bin/libpypy3.10-c.so.debug","no package identified in executable file"
 "pypy:latest","/opt/pypy/bin/pypy3.10","no package identified in executable file"
 "pypy:latest","/opt/pypy/bin/pypy3.10.debug","no package identified in executable file"

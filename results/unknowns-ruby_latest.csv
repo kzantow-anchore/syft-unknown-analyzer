@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "ruby:latest","/usr/local/lib/ruby/3.3.0/x86_64-linux/bigdecimal.so","no package identified in executable file"
 "ruby:latest","/usr/local/lib/ruby/3.3.0/x86_64-linux/cgi/escape.so","no package identified in executable file"
 "ruby:latest","/usr/local/lib/ruby/3.3.0/x86_64-linux/continuation.so","no package identified in executable file"

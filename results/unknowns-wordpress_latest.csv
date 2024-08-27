@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "wordpress:latest","/usr/local/lib/php/extensions/no-debug-non-zts-20220829/bcmath.so","no package identified in executable file"
 "wordpress:latest","/usr/local/lib/php/extensions/no-debug-non-zts-20220829/exif.so","no package identified in executable file"
 "wordpress:latest","/usr/local/lib/php/extensions/no-debug-non-zts-20220829/gd.so","no package identified in executable file"

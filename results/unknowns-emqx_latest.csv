@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "emqx:latest","/opt/emqx/dynlibs/libcrypto.so.3","no package identified in executable file"
 "emqx:latest","/opt/emqx/dynlibs/libtinfo.so.6","no package identified in executable file"
 "emqx:latest","/opt/emqx/erts-14.2.5/bin/beam.smp","no package identified in executable file"

@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "dart:latest","/usr/lib/dart/bin/dart","no package identified in executable file"
 "dart:latest","/usr/lib/dart/bin/dartaotruntime","no package identified in executable file"
 "dart:latest","/usr/lib/dart/bin/snapshots/dart2wasm_product.snapshot","no package identified in executable file"

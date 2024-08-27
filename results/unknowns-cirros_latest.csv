@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "cirros:latest","/bin/chattr","no package identified in executable file"
 "cirros:latest","/bin/dmesg","no package identified in executable file"
 "cirros:latest","/bin/findmnt","no package identified in executable file"

@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "storm:latest","/apache-storm-2.6.3/external/storm-autocreds/javax.inject-1.jar","no package identified in archive"
 "storm:latest","/apache-storm-2.6.3/lib-tools/submit-tools/javax.inject-1.jar","no package identified in archive"
 "storm:latest","/opt/java/openjdk/bin/jaotc","no package identified in executable file"

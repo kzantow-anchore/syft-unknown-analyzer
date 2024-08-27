@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "silverpeas:latest","/opt/wildfly/modules/system/layers/base/io/netty/netty-transport-native-epoll/main/lib/META-INF/native/libnetty_transport_native_epoll_aarch_64.so","no package identified in executable file"
 "silverpeas:latest","/opt/wildfly/modules/system/layers/base/io/netty/netty-transport-native-epoll/main/lib/META-INF/native/libnetty_transport_native_epoll_x86_64.so","no package identified in executable file"
 "silverpeas:latest","/opt/wildfly/modules/system/layers/base/io/netty/netty-transport-native-kqueue/main/lib/META-INF/native/libnetty_transport_native_kqueue_aarch_64.jnilib","rust cataloger: unable to read dependency information: unknown file format"

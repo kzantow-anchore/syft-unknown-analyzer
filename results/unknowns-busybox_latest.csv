@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "busybox:latest","/bin/getconf","no package identified in executable file"
 "busybox:latest","/lib/ld-linux-x86-64.so.2","no package identified in executable file"
 "busybox:latest","/lib/libc.so.6","no package identified in executable file"

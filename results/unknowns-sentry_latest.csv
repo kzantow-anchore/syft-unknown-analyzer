@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "sentry:latest","/usr/local/bin/gosu","no package identified in executable file"
 "sentry:latest","/usr/local/bin/tini","no package identified in executable file"
 "sentry:latest","/usr/local/bin/uwsgi","no package identified in executable file"

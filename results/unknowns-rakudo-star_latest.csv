@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "rakudo-star:latest","/root/.zef/store/raku-file-which-master/A70ECE0DBBC81E9C47C60EA7AEBC65C88F96FFA6/t/corpus/test-bin-win/0.exe","not a PE file, smaller than tiny PE"
 "rakudo-star:latest","/root/.zef/store/raku-file-which-master/A70ECE0DBBC81E9C47C60EA7AEBC65C88F96FFA6/t/corpus/test-bin-win/all.exe","not a PE file, smaller than tiny PE"
 "rakudo-star:latest","/root/.zef/store/raku-file-which-master/A70ECE0DBBC81E9C47C60EA7AEBC65C88F96FFA6/t/corpus/test-bin-win/test1.exe","not a PE file, smaller than tiny PE"

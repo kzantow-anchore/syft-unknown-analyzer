@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "cassandra:latest","/opt/cassandra/lib/javax.inject-1.jar","no package identified in archive"
 "cassandra:latest","/opt/cassandra/lib/sigar-bin/libsigar-amd64-freebsd-6.so","no package identified in executable file"
 "cassandra:latest","/opt/cassandra/lib/sigar-bin/libsigar-amd64-linux.so","no package identified in executable file"

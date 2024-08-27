@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "julia:latest","/usr/local/julia/bin/julia","no package identified in executable file"
 "julia:latest","/usr/local/julia/lib/julia/libLLVM-15jl.so","no package identified in executable file"
 "julia:latest","/usr/local/julia/lib/julia/libamd.so.3.2.1","no package identified in executable file"

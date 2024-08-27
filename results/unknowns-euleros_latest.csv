@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "euleros:latest","/usr/bin/[","no package identified in executable file"
 "euleros:latest","/usr/bin/arch","no package identified in executable file"
 "euleros:latest","/usr/bin/base64","no package identified in executable file"

@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "hylang:latest","/usr/local/lib/libpython3.so","no package identified in executable file"
 "hylang:latest","/usr/local/lib/python3.12/lib-dynload/_asyncio.cpython-312-x86_64-linux-gnu.so","no package identified in executable file"
 "hylang:latest","/usr/local/lib/python3.12/lib-dynload/_bisect.cpython-312-x86_64-linux-gnu.so","no package identified in executable file"

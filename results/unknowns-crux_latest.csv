@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "crux:latest","/bin/attr","no package identified in executable file"
 "crux:latest","/bin/cat","no package identified in executable file"
 "crux:latest","/bin/chacl","no package identified in executable file"

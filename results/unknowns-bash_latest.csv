@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "bash:latest","/usr/local/lib/bash/accept","no package identified in executable file"
 "bash:latest","/usr/local/lib/bash/basename","no package identified in executable file"
 "bash:latest","/usr/local/lib/bash/csv","no package identified in executable file"

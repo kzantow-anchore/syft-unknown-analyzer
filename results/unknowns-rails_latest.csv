@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "rails:latest","/usr/local/bundle/extensions/x86_64-linux/2.3.0/nio4r-1.2.1/nio4r_ext.so","no package identified in executable file"
 "rails:latest","/usr/local/bundle/extensions/x86_64-linux/2.3.0/nokogiri-1.7.0.1/nokogiri/nokogiri.so","no package identified in executable file"
 "rails:latest","/usr/local/bundle/extensions/x86_64-linux/2.3.0/websocket-driver-0.6.4/websocket_mask.so","no package identified in executable file"

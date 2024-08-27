@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "liquibase:latest","/opt/java/openjdk/bin/jfr","no package identified in executable file"
 "liquibase:latest","/opt/java/openjdk/bin/jrunscript","no package identified in executable file"
 "liquibase:latest","/opt/java/openjdk/bin/keytool","no package identified in executable file"

@@ -1,4 +1,4 @@
-"IMAGE",FILE","ERROR"
+"IMAGE","FILE","ERROR"
 "sourcemage:latest","/bin/[","no package identified in executable file"
 "sourcemage:latest","/bin/base64","no package identified in executable file"
 "sourcemage:latest","/bin/basename","no package identified in executable file"
