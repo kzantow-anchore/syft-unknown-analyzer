@@ -111,8 +111,6 @@ github.com/anchore/packageurl-go v0.1.1-0.20240507183024-848e011fc24f h1:B/E9ixK
 github.com/anchore/packageurl-go v0.1.1-0.20240507183024-848e011fc24f/go.mod h1:Blo6OgJNiYF41ufcgHKkbCKF2MDOMlrqhXv/ij6ocR4=
 github.com/anchore/stereoscope v0.0.3 h1:JRPHySy8S6P+Ff3IDiQ29ap1i8/laUQxDk9K1eFh/2U=
 github.com/anchore/stereoscope v0.0.3/go.mod h1:5DJheGPjVRsSqegTB24Zi6SCHnYQnA519yeIG+RG+I4=
-github.com/anchore/syft v1.11.2-0.20240826140759-cf9bb13f2bfe h1:4/o5kM/zT0ERokHfe86XvqNWUXEsqKU3qQAwzC3WHlI=
-github.com/anchore/syft v1.11.2-0.20240826140759-cf9bb13f2bfe/go.mod h1:Hk5BT8JX7SRvWuf/vWnDeK56GKojX+ngHxIUovRw3Xc=
 github.com/andreyvit/diff v0.0.0-20170406064948-c7f18ee00883/go.mod h1:rCTlJbsFo29Kk6CurOXKm700vrz8f0KW0JNfpkRJY/8=
 github.com/andybalholm/brotli v1.0.1/go.mod h1:loMXtMfwqflxFJPmdbJO0a3KNoPuLBgiu3qAvBg8x/Y=
 github.com/andybalholm/brotli v1.0.4 h1:V7DdXeJtZscaqfNuAdSRuRFzuiKlHSC/Zh3zl9qY3JY=
@@ -507,6 +505,8 @@ github.com/kr/pty v1.1.1/go.mod h1:pFQYn66WHrOpPYNljwOMqo10TkYh1fy3cYio2l3bCsQ=
 github.com/kr/text v0.1.0/go.mod h1:4Jbv+DJW3UT/LiOwJeYQe1efqtUx/iVham/4vfdArNI=
 github.com/kr/text v0.2.0 h1:5Nx0Ya0ZqY2ygV366QzturHI13Jq95ApcVaJBhpS+AY=
 github.com/kr/text v0.2.0/go.mod h1:eLer722TekiGuMkidMxC/pM04lWEeraHUUmBw8l2grE=
+github.com/kzantow-anchore/syft v0.41.4-0.20240827045131-0fce8be721b5 h1:C5RmmRgFZuf54+IjLSWanNb1T+l7ciXpklAONpgyYrg=
+github.com/kzantow-anchore/syft v0.41.4-0.20240827045131-0fce8be721b5/go.mod h1:Hk5BT8JX7SRvWuf/vWnDeK56GKojX+ngHxIUovRw3Xc=
 github.com/logrusorgru/aurora v2.0.3+incompatible h1:tOpm7WcpBTn4fjmVfgpQq0EfczGlG91VSDkswnjF5A8=
 github.com/logrusorgru/aurora v2.0.3+incompatible/go.mod h1:7rIyQOR62GCctdiQpZ/zOJlFyk6y+94wXzv6RNZgaR4=
 github.com/lucasb-eyer/go-colorful v1.2.0 h1:1nnpGOrhyZZuNyfu1QjKiUICQ74+3FNCN69Aj6K7nkY=

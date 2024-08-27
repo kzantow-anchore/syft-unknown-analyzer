@@ -201,3 +201,5 @@ require (
 	modernc.org/memory v1.8.0 // indirect
 	modernc.org/sqlite v1.32.0 // indirect
 )
+
+replace github.com/anchore/syft => github.com/kzantow-anchore/syft v0.41.4-0.20240827045131-0fce8be721b5
