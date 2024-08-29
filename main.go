@@ -48,6 +48,8 @@ func main() {
 	startTime := time.Now()
 	scanTimes := map[string]time.Duration{}
 
+	providers := []string{"registry"} // or "docker", etc.
+
 	for idx, source := range sourcesIterator() {
 		ref := source + ":latest"
 
@@ -63,7 +65,7 @@ func main() {
 			imageStartTime := time.Now()
 
 			src := getOrPanic(syft.GetSource(ctx, ref, syft.DefaultGetSourceConfig().
-				WithSources("registry")))
+				WithSources(providers...)))
 			defer func() { _ = src.Close() }()
 
 			cfg := syft.DefaultCreateSBOMConfig().
@@ -111,9 +113,11 @@ func main() {
 			scanTimes[ref] = scanTime
 			fmt.Printf("completed %v '%v' in %v\n", idx, ref, scanTime)
 
-			img := getOrPanic(run("docker", "image", "list", "-aq", "-f", "reference="+ref))
-			img = strings.TrimSpace(img)
-			_ = getOrPanic(run("docker", "image", "rm", "-f", img))
+			if providers[0] == "docker" {
+				img := getOrPanic(run("docker", "image", "list", "-aq", "-f", "reference="+ref))
+				img = strings.TrimSpace(img)
+				_ = getOrPanic(run("docker", "image", "rm", "-f", img))
+			}
 		})
 	}
 
