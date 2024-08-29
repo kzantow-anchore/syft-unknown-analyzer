@@ -63,7 +63,7 @@ func main() {
 			imageStartTime := time.Now()
 
 			src := getOrPanic(syft.GetSource(ctx, ref, syft.DefaultGetSourceConfig().
-				WithSources("docker")))
+				WithSources("registry")))
 			defer func() { _ = src.Close() }()
 
 			cfg := syft.DefaultCreateSBOMConfig().
