@@ -13,4 +13,4 @@
 "monica:latest","/usr/local/lib/php/extensions/no-debug-non-zts-20220829/soap.so","unknowns-labeler","no package identified in executable file"
 "monica:latest","/usr/local/lib/php/extensions/no-debug-non-zts-20220829/sodium.so","unknowns-labeler","no package identified in executable file"
 "monica:latest","/usr/local/lib/php/extensions/no-debug-non-zts-20220829/zip.so","unknowns-labeler","no package identified in executable file"
-"monica:latest","/var/www/html/package.json","javascript-package-cataloger","encountered package.json file without a name () and/or version () field"
+"monica:latest","/var/www/html/package.json","javascript-package-cataloger","skipping package.json with insufficient package information: name: '', version: ''"

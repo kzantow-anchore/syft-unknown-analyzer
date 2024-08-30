@@ -2,7 +2,7 @@
 "golang:latest","/usr/local/go/src/archive/zip/testdata/comment-truncated.zip","java-archive-cataloger","unable to read files from java archive: zip: not a valid zip file"
 "golang:latest","/usr/local/go/src/archive/zip/testdata/test-badbase.zip","java-archive-cataloger","unable to read files from java archive: zip: not a valid zip file"
 "golang:latest","/usr/local/go/src/archive/zip/testdata/test-baddirsz.zip","java-archive-cataloger","unable to read files from java archive: zip: not a valid zip file"
-"golang:latest","/usr/local/go/src/cmd/vendor/golang.org/x/telemetry/package.json","javascript-package-cataloger","encountered package.json file without a name () and/or version () field"
+"golang:latest","/usr/local/go/src/cmd/vendor/golang.org/x/telemetry/package.json","javascript-package-cataloger","skipping package.json with insufficient package information: name: '', version: ''"
 "golang:latest","/usr/local/go/src/debug/dwarf/testdata/line-clang-dwarf5.elf","unknowns-labeler","no package identified in executable file"
 "golang:latest","/usr/local/go/src/debug/dwarf/testdata/line-clang.elf","unknowns-labeler","no package identified in executable file"
 "golang:latest","/usr/local/go/src/debug/dwarf/testdata/line-gcc-dwarf5.elf","unknowns-labeler","no package identified in executable file"

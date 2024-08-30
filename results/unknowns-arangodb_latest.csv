@@ -6,4 +6,4 @@
 "arangodb:latest","/usr/bin/arangorestore","unknowns-labeler","no package identified in executable file"
 "arangodb:latest","/usr/bin/arangovpack","unknowns-labeler","no package identified in executable file"
 "arangodb:latest","/usr/sbin/arangod","unknowns-labeler","no package identified in executable file"
-"arangodb:latest","/usr/share/arangodb3/js/node/package.json","javascript-package-cataloger","encountered package.json file without a name () and/or version () field"
+"arangodb:latest","/usr/share/arangodb3/js/node/package.json","javascript-package-cataloger","skipping package.json with insufficient package information: name: '', version: ''"

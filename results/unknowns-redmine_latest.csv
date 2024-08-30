@@ -129,4 +129,4 @@
 "redmine:latest","/usr/local/lib/ruby/3.2.0/x86_64-linux/zlib.so","unknowns-labeler","no package identified in executable file"
 "redmine:latest","/usr/local/lib/ruby/gems/3.2.0/extensions/x86_64-linux/3.2.0/debug-1.7.1/debug/debug.so","unknowns-labeler","no package identified in executable file"
 "redmine:latest","/usr/local/lib/ruby/gems/3.2.0/extensions/x86_64-linux/3.2.0/rbs-2.8.2/rbs_extension.so","unknowns-labeler","no package identified in executable file"
-"redmine:latest","/usr/src/redmine/package.json","javascript-package-cataloger","encountered package.json file without a name () and/or version () field"
+"redmine:latest","/usr/src/redmine/package.json","javascript-package-cataloger","skipping package.json with insufficient package information: name: '', version: ''"

@@ -1,6 +1,6 @@
 "IMAGE","FILE","TASK",ERROR"
-"drupal:latest","/opt/drupal/web/core/modules/system/tests/fixtures/HtaccessTest/package.json","javascript-package-cataloger","encountered package.json file without a name () and/or version () field"
-"drupal:latest","/opt/drupal/web/core/package.json","javascript-package-cataloger","encountered package.json file without a name (Drupal) and/or version () field"
+"drupal:latest","/opt/drupal/web/core/modules/system/tests/fixtures/HtaccessTest/package.json","javascript-package-cataloger","skipping package.json with insufficient package information: name: '', version: ''"
+"drupal:latest","/opt/drupal/web/core/package.json","javascript-package-cataloger","skipping package.json with insufficient package information: name: 'Drupal', version: ''"
 "drupal:latest","/usr/local/lib/php/extensions/no-debug-non-zts-20230831/gd.so","unknowns-labeler","no package identified in executable file"
 "drupal:latest","/usr/local/lib/php/extensions/no-debug-non-zts-20230831/opcache.so","unknowns-labeler","no package identified in executable file"
 "drupal:latest","/usr/local/lib/php/extensions/no-debug-non-zts-20230831/pdo_mysql.so","unknowns-labeler","no package identified in executable file"
