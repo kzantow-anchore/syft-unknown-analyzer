@@ -1,2 +1,2 @@
-"IMAGE","FILE","ERROR"
-"hola-mundo:latest","/hello","no package identified in executable file"
+"IMAGE","FILE","TASK",ERROR"
+"hola-mundo:latest","/hello","unknowns-labeler","no package identified in executable file"

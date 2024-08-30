@@ -1,2 +1,2 @@
-"IMAGE","FILE","ERROR"
-"swarm:latest","/swarm","no package identified in executable file"
+"IMAGE","FILE","TASK",ERROR"
+"swarm:latest","/swarm","unknowns-labeler","no package identified in executable file"

@@ -1,3 +1,4 @@
-"IMAGE","FILE","ERROR"
-"iojs:latest","/usr/local/bin/iojs","no package identified in executable file"
-"iojs:latest","/var/lib/dpkg/info/bash.preinst","no package identified in executable file"
+"IMAGE","FILE","TASK",ERROR"
+"iojs:latest","/usr/local/bin/iojs","unknowns-labeler","no package identified in executable file"
+"iojs:latest","/usr/local/lib/node_modules/npm/node_modules/read-package-json/node_modules/json-parse-helpfulerror/node_modules/jju/benchmark/package.json","javascript-package-cataloger","encountered package.json file without a name (benchmarks) and/or version () field"
+"iojs:latest","/var/lib/dpkg/info/bash.preinst","unknowns-labeler","no package identified in executable file"

@@ -1,4 +1,4 @@
-"IMAGE","FILE","ERROR"
-"thrift:latest","/usr/local/bin/thrift","no package identified in executable file"
-"thrift:latest","/var/lib/dpkg/info/bash.preinst","no package identified in executable file"
-"thrift:latest","/var/lib/dpkg/info/dash.preinst","no package identified in executable file"
+"IMAGE","FILE","TASK",ERROR"
+"thrift:latest","/usr/local/bin/thrift","unknowns-labeler","no package identified in executable file"
+"thrift:latest","/var/lib/dpkg/info/bash.preinst","unknowns-labeler","no package identified in executable file"
+"thrift:latest","/var/lib/dpkg/info/dash.preinst","unknowns-labeler","no package identified in executable file"

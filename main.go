@@ -12,6 +12,7 @@ import (
 	"path/filepath"
 	"slices"
 	"strings"
+	"sync/atomic"
 	"time"
 
 	_ "github.com/glebarez/sqlite"
@@ -24,6 +25,7 @@ import (
 	"github.com/anchore/syft/syft/cataloging"
 	"github.com/anchore/syft/syft/cataloging/filecataloging"
 	"github.com/anchore/syft/syft/file"
+	"github.com/anchore/syft/syft/source"
 )
 
 func main() {
@@ -48,10 +50,13 @@ func main() {
 	startTime := time.Now()
 	scanTimes := map[string]time.Duration{}
 
+	// TODO check the total number of files
+	total := atomic.Int64{}
+
 	providers := []string{"registry"} // or "docker", etc.
 
-	for idx, source := range sourcesIterator() {
-		ref := source + ":latest"
+	for idx, imageName := range sourcesIterator() {
+		ref := imageName + ":latest"
 
 		if idx < startAt {
 			continue
@@ -67,6 +72,9 @@ func main() {
 			src := getOrPanic(syft.GetSource(ctx, ref, syft.DefaultGetSourceConfig().
 				WithSources(providers...)))
 			defer func() { _ = src.Close() }()
+
+			fileCount := len(getOrPanic(getOrPanic(src.FileResolver(source.SquashedScope)).FilesByGlob("**/*")))
+			total.Add(int64(fileCount))
 
 			cfg := syft.DefaultCreateSBOMConfig().
 				WithUnknownsConfig(cataloging.UnknownsConfig{
@@ -101,11 +109,17 @@ func main() {
 				return strings.Compare(a.RealPath, b.RealPath)
 			})
 
-			writeLn(`"IMAGE","FILE","ERROR"`)
+			writeLn(`"IMAGE","FILE","TASK",ERROR"`)
 			for _, coord := range keys {
 				errs := unknownMap[coord]
 				for _, err := range errs {
-					writeLn(`"%s","%s","%s"`, escapeQuotedCsv(ref), escapeQuotedCsv(coord.RealPath), escapeQuotedCsv(err))
+					parts := strings.SplitN(err, ": ", 2)
+					tsk := ""
+					if len(parts) > 1 {
+						tsk = parts[0]
+						err = parts[1]
+					}
+					writeLn(`"%s","%s","%s","%s"`, escapeQuotedCsv(ref), escapeQuotedCsv(coord.RealPath), escapeQuotedCsv(tsk), escapeQuotedCsv(err))
 				}
 			}
 
@@ -116,7 +130,7 @@ func main() {
 			if providers[0] == "docker" {
 				img := getOrPanic(run("docker", "image", "list", "-aq", "-f", "reference="+ref))
 				img = strings.TrimSpace(img)
-				_ = getOrPanic(run("docker", "image", "rm", "-f", img))
+				_ = getOrPanic(run("docker", "rmi", "-f", img))
 			}
 		})
 	}
@@ -126,7 +140,7 @@ func main() {
 	for ref, duration := range sorted(scanTimes) {
 		fmt.Printf("%v\t%v\n", ref, duration)
 	}
-	fmt.Printf("all completed in %v\n", time.Now().Sub(startTime))
+	fmt.Printf("all completed in %v; total files scanned: %v\n", time.Now().Sub(startTime), total.Load())
 }
 
 func sorted[K cmp.Ordered, V any](values map[K]V) func(func(K, V) bool) {

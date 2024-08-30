@@ -1,0 +1,5 @@
+"IMAGE","FILE","TASK",ERROR"
+"odoo:latest","/usr/local/lib/node_modules/rtlcss/node_modules/nanoid/async/package.json","javascript-package-cataloger","encountered package.json file without a name () and/or version () field"
+"odoo:latest","/usr/local/lib/node_modules/rtlcss/node_modules/nanoid/non-secure/package.json","javascript-package-cataloger","encountered package.json file without a name () and/or version () field"
+"odoo:latest","/usr/local/lib/node_modules/rtlcss/node_modules/nanoid/url-alphabet/package.json","javascript-package-cataloger","encountered package.json file without a name () and/or version () field"
+"odoo:latest","/usr/share/nodejs/tslib/modules/package.json","javascript-package-cataloger","encountered package.json file without a name () and/or version () field"

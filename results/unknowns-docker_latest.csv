@@ -1,2 +1,2 @@
-"IMAGE","FILE","ERROR"
-"docker:latest","/usr/local/bin/docker-init","no package identified in executable file"
+"IMAGE","FILE","TASK",ERROR"
+"docker:latest","/usr/local/bin/docker-init","unknowns-labeler","no package identified in executable file"
