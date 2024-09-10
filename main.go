@@ -32,6 +32,7 @@ func main() {
 	startAt := 0
 	count := 1000
 	parallelism := 4
+	enrich := true
 
 	ctx := context.Background()
 	executor := sync.NewExecutor(parallelism)
@@ -55,7 +56,7 @@ func main() {
 
 	providers := []string{"registry"} // or "docker", etc.
 
-	for idx, imageName := range sourcesIterator() {
+	for idx, imageName := range imagesIterator() {
 		ref := imageName + ":latest"
 
 		if idx < startAt {
@@ -82,7 +83,16 @@ func main() {
 					IncludeExecutablesWithoutPackages: true,
 					IncludeUnexpandedArchives:         true,
 				}).
+				// disable file hashing
 				WithFilesConfig(filecataloging.DefaultConfig().WithHashers())
+
+			if enrich {
+				cfg = cfg.WithPackagesConfig(cfg.Packages.
+					WithJavascriptConfig(cfg.Packages.JavaScript.WithSearchRemoteLicenses(true)).
+					WithJavaArchiveConfig(cfg.Packages.JavaArchive.WithUseNetwork(true)).
+					WithGolangConfig(cfg.Packages.Golang.WithSearchRemoteLicenses(true)),
+				)
+			}
 
 			sbom := getOrPanic(syft.CreateSBOM(ctx, src, cfg))
 
@@ -159,16 +169,16 @@ func escapeQuotedCsv(value string) string {
 	return strings.ReplaceAll(value, "\"", "\"\"")
 }
 
-func sourcesIterator() func(func(int, string) bool) {
+func imagesIterator() func(func(int, string) bool) {
 	idx := 0
 
 	return func(f func(int, string) bool) {
 		next := "https://hub.docker.com/v2/repositories/library/?page_size=100"
 		for {
-			var sources []string
-			sources, next = getImageList(next)
-			for _, source := range sources {
-				if !f(idx, source) {
+			var images []string
+			images, next = getImageList(next)
+			for _, image := range images {
+				if !f(idx, image) {
 					return
 				}
 				idx++

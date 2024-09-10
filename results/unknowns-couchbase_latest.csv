@@ -8,4 +8,3 @@
 "couchbase:latest","/usr/sbin/sv","unknowns-labeler","no package identified in executable file"
 "couchbase:latest","/usr/sbin/svlogd","unknowns-labeler","no package identified in executable file"
 "couchbase:latest","/usr/sbin/utmpset","unknowns-labeler","no package identified in executable file"
-"couchbase:latest","/var/lib/dpkg/info/bash.preinst","unknowns-labeler","no package identified in executable file"
