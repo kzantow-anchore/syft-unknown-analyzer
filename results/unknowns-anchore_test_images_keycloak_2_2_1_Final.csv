@@ -1,0 +1,6 @@
+"IMAGE","FILE","TASK",ERROR"
+"anchore/test_images:keycloak-2.2.1.Final","/opt/jboss/keycloak/modules/system/layers/base/javax/inject/api/main/javax.inject-1.jar","java-archive-cataloger","no package identified in archive"
+"anchore/test_images:keycloak-2.2.1.Final","/opt/jboss/keycloak/modules/system/layers/base/org/apache/activemq/artemis/main/lib/linux-i686/libartemis-native-32.so","unknowns-labeler","no package identified in executable file"
+"anchore/test_images:keycloak-2.2.1.Final","/opt/jboss/keycloak/modules/system/layers/base/org/apache/activemq/artemis/main/lib/linux-x86_64/libartemis-native-64.so","unknowns-labeler","no package identified in executable file"
+"anchore/test_images:keycloak-2.2.1.Final","/opt/jboss/keycloak/modules/system/layers/base/org/apache/cxf/impl/main/cxf-rt-security-3.1.4-jandex.jar","java-archive-cataloger","no package identified in archive"
+"anchore/test_images:keycloak-2.2.1.Final","/opt/jboss/keycloak/modules/system/layers/base/org/apache/cxf/impl/main/cxf-rt-ws-security-3.1.4-jandex.jar","java-archive-cataloger","no package identified in archive"

@@ -1,0 +1,8 @@
+"IMAGE","FILE","TASK",ERROR"
+"anchore/test_images:vulnerabilities-amazonlinux-2-5c26ce9","/usr/local/lib64/python3.7/site-packages/aiohttp/_frozenlist.cpython-37m-x86_64-linux-gnu.so","unknowns-labeler","no package identified in executable file"
+"anchore/test_images:vulnerabilities-amazonlinux-2-5c26ce9","/usr/local/lib64/python3.7/site-packages/aiohttp/_helpers.cpython-37m-x86_64-linux-gnu.so","unknowns-labeler","no package identified in executable file"
+"anchore/test_images:vulnerabilities-amazonlinux-2-5c26ce9","/usr/local/lib64/python3.7/site-packages/aiohttp/_http_parser.cpython-37m-x86_64-linux-gnu.so","unknowns-labeler","no package identified in executable file"
+"anchore/test_images:vulnerabilities-amazonlinux-2-5c26ce9","/usr/local/lib64/python3.7/site-packages/aiohttp/_http_writer.cpython-37m-x86_64-linux-gnu.so","unknowns-labeler","no package identified in executable file"
+"anchore/test_images:vulnerabilities-amazonlinux-2-5c26ce9","/usr/local/lib64/python3.7/site-packages/aiohttp/_websocket.cpython-37m-x86_64-linux-gnu.so","unknowns-labeler","no package identified in executable file"
+"anchore/test_images:vulnerabilities-amazonlinux-2-5c26ce9","/usr/local/lib64/python3.7/site-packages/multidict/_multidict.cpython-37m-x86_64-linux-gnu.so","unknowns-labeler","no package identified in executable file"
+"anchore/test_images:vulnerabilities-amazonlinux-2-5c26ce9","/usr/local/lib64/python3.7/site-packages/yarl/_quoting_c.cpython-37m-x86_64-linux-gnu.so","unknowns-labeler","no package identified in executable file"

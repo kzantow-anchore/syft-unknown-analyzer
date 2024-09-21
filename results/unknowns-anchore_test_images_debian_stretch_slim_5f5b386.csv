@@ -1,0 +1,2 @@
+"IMAGE","FILE","TASK",ERROR"
+"anchore/test_images:debian-stretch-slim-5f5b386","/var/lib/dpkg/info/bash.preinst","unknowns-labeler","no package identified in executable file"

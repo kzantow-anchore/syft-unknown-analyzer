@@ -1,0 +1,2 @@
+"IMAGE","FILE","TASK",ERROR"
+"anchore/test_images:ownership-overlap","/var/lib/dpkg/info/bash.preinst","unknowns-labeler","no package identified in executable file"

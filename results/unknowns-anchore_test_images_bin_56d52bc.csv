@@ -1,0 +1,6 @@
+"IMAGE","FILE","TASK",ERROR"
+"anchore/test_images:bin-56d52bc","/staged/copy/busybox","unknowns-labeler","no package identified in executable file"
+"anchore/test_images:bin-56d52bc","/staged/copy/go","unknowns-labeler","no package identified in executable file"
+"anchore/test_images:bin-56d52bc","/staged/copy/libpython2.7.so.1.0","unknowns-labeler","no package identified in executable file"
+"anchore/test_images:bin-56d52bc","/staged/copy/python3.8","unknowns-labeler","no package identified in executable file"
+"anchore/test_images:bin-56d52bc","/usr/lib/go/src/runtime/race/race_darwin_amd64.syso","cargo-auditable-binary-cataloger","rust cataloger: unable to read dependency information: unknown file format"

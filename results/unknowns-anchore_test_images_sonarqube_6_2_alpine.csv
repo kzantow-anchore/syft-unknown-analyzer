@@ -1,0 +1,2 @@
+"IMAGE","FILE","TASK",ERROR"
+"anchore/test_images:sonarqube-6.2-alpine","/usr/lib/jvm/java-1.8-openjdk/lib/sa-jdi.jar","java-archive-cataloger","unable to read files from java archive: zip: not a valid zip file"

@@ -1,0 +1,2 @@
+"IMAGE","FILE","TASK",ERROR"
+"anchore/test_images:npm-7872316","/app/package.json","javascript-package-cataloger","skipping package.json with insufficient package information: name: '', version: ''"

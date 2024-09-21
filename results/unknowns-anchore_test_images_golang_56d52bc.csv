@@ -1,0 +1,3 @@
+"IMAGE","FILE","TASK",ERROR"
+"anchore/test_images:golang-56d52bc","/usr/lib/go/src/runtime/race/race_darwin_amd64.syso","cargo-auditable-binary-cataloger","rust cataloger: unable to read dependency information: unknown file format"
+"anchore/test_images:golang-56d52bc","/usr/lib/go/src/runtime/race/race_darwin_arm64.syso","cargo-auditable-binary-cataloger","rust cataloger: unable to read dependency information: unknown file format"

@@ -1,0 +1,3 @@
+"IMAGE","FILE","TASK",ERROR"
+"anchore/test_images:sonarqube-7.1","/usr/local/bin/gosu","unknowns-labeler","no package identified in executable file"
+"anchore/test_images:sonarqube-7.1","/var/lib/dpkg/info/bash.preinst","unknowns-labeler","no package identified in executable file"

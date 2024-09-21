@@ -1,0 +1,8 @@
+"IMAGE","FILE","TASK",ERROR"
+"anchore/test_images:vulnerabilities-centos-7872316","/usr/local/lib64/python3.6/site-packages/aiohttp/_frozenlist.cpython-36m-x86_64-linux-gnu.so","unknowns-labeler","no package identified in executable file"
+"anchore/test_images:vulnerabilities-centos-7872316","/usr/local/lib64/python3.6/site-packages/aiohttp/_helpers.cpython-36m-x86_64-linux-gnu.so","unknowns-labeler","no package identified in executable file"
+"anchore/test_images:vulnerabilities-centos-7872316","/usr/local/lib64/python3.6/site-packages/aiohttp/_http_parser.cpython-36m-x86_64-linux-gnu.so","unknowns-labeler","no package identified in executable file"
+"anchore/test_images:vulnerabilities-centos-7872316","/usr/local/lib64/python3.6/site-packages/aiohttp/_http_writer.cpython-36m-x86_64-linux-gnu.so","unknowns-labeler","no package identified in executable file"
+"anchore/test_images:vulnerabilities-centos-7872316","/usr/local/lib64/python3.6/site-packages/aiohttp/_websocket.cpython-36m-x86_64-linux-gnu.so","unknowns-labeler","no package identified in executable file"
+"anchore/test_images:vulnerabilities-centos-7872316","/usr/local/lib64/python3.6/site-packages/multidict/_multidict.cpython-36m-x86_64-linux-gnu.so","unknowns-labeler","no package identified in executable file"
+"anchore/test_images:vulnerabilities-centos-7872316","/usr/local/lib64/python3.6/site-packages/yarl/_quoting_c.cpython-36m-x86_64-linux-gnu.so","unknowns-labeler","no package identified in executable file"

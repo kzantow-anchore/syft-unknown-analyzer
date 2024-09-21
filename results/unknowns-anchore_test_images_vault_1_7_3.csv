@@ -1,0 +1,2 @@
+"IMAGE","FILE","TASK",ERROR"
+"anchore/test_images:vault-1.7.3","/bin/vault","unknowns-labeler","no package identified in executable file"

@@ -1,0 +1,2 @@
+"IMAGE","FILE","TASK",ERROR"
+"anchore/test_images:appstreams-rhel-8-1a287dd","/usr/lib/node_modules/npm/node_modules/term-size/vendor/macos/term-size","cargo-auditable-binary-cataloger","rust cataloger: unable to read dependency information: unknown file format"

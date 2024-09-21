@@ -1,0 +1,3 @@
+"IMAGE","FILE","TASK",ERROR"
+"anchore/test_images:sonarqube-5.6.3-alpine","/opt/sonarqube/lib/common/elasticsearch-1.7.5.jar","java-archive-cataloger","no package identified in archive"
+"anchore/test_images:sonarqube-5.6.3-alpine","/usr/lib/jvm/java-1.8-openjdk/lib/sa-jdi.jar","java-archive-cataloger","unable to read files from java archive: zip: not a valid zip file"

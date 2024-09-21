@@ -1,0 +1,3 @@
+"IMAGE","FILE","TASK",ERROR"
+"anchore/test_images:azurelinux3-d028093","/usr/lib/ld-linux-x86-64.so.2","elf-binary-package-cataloger","unable to process ELF binary: invalid character '\x00' after top-level value"
+"anchore/test_images:azurelinux3-d028093","/usr/lib/libc.so.6","elf-binary-package-cataloger","unable to process ELF binary: invalid character '\x00' after top-level value"

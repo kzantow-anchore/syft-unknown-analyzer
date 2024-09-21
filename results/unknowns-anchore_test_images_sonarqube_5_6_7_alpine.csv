@@ -1,0 +1,2 @@
+"IMAGE","FILE","TASK",ERROR"
+"anchore/test_images:sonarqube-5.6.7-alpine","/opt/sonarqube/lib/common/elasticsearch-1.7.5.jar","java-archive-cataloger","no package identified in archive"

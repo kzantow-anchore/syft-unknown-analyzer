@@ -1,0 +1,8 @@
+"IMAGE","FILE","TASK",ERROR"
+"anchore/test_images:maven-3.8.1-amazoncorretto-16","/usr/share/maven/lib/jansi-native/freebsd32/libjansi.so","unknowns-labeler","no package identified in executable file"
+"anchore/test_images:maven-3.8.1-amazoncorretto-16","/usr/share/maven/lib/jansi-native/freebsd64/libjansi.so","unknowns-labeler","no package identified in executable file"
+"anchore/test_images:maven-3.8.1-amazoncorretto-16","/usr/share/maven/lib/jansi-native/linux32/libjansi.so","unknowns-labeler","no package identified in executable file"
+"anchore/test_images:maven-3.8.1-amazoncorretto-16","/usr/share/maven/lib/jansi-native/linux64/libjansi.so","unknowns-labeler","no package identified in executable file"
+"anchore/test_images:maven-3.8.1-amazoncorretto-16","/usr/share/maven/lib/jansi-native/osx/libjansi.jnilib","cargo-auditable-binary-cataloger","rust cataloger: unable to read dependency information: unknown file format"
+"anchore/test_images:maven-3.8.1-amazoncorretto-16","/usr/share/maven/lib/jansi-native/osx/libjansi.jnilib","unknowns-labeler","no package identified in executable file"
+"anchore/test_images:maven-3.8.1-amazoncorretto-16","/usr/share/maven/lib/javax.inject-1.jar","java-archive-cataloger","no package identified in archive"

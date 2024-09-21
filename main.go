@@ -10,6 +10,7 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
+	"regexp"
 	"slices"
 	"strings"
 	"sync/atomic"
@@ -57,7 +58,7 @@ func main() {
 	providers := []string{"registry"} // or "docker", etc.
 
 	for idx, imageName := range imagesIterator() {
-		ref := imageName + ":latest"
+		ref := imageName
 
 		if idx < startAt {
 			continue
@@ -99,7 +100,8 @@ func main() {
 			// ignore unknowns we don't care about, since we are not removing unknowns with packages
 			filterUnknowns(sbom.Artifacts.Unknowns)
 
-			resultFilePath := filepath.Join(resultDir, fmt.Sprintf("unknowns-%s.csv", strings.ReplaceAll(ref, ":", "_")))
+			safeRef := regexp.MustCompile(`[^a-zA-Z0-9]`).ReplaceAllString(ref, "_")
+			resultFilePath := filepath.Join(resultDir, fmt.Sprintf("unknowns-%s.csv", safeRef))
 			_ = os.Remove(resultFilePath)
 
 			unknownMap := sbom.Artifacts.Unknowns
@@ -170,15 +172,40 @@ func escapeQuotedCsv(value string) string {
 }
 
 func imagesIterator() func(func(int, string) bool) {
+	return imagesTagsIterator("anchore", "test_images")
+}
+
+func imagesTagsIterator(org, name string) func(func(int, string) bool) {
+	idx := 0
+
+	return func(f func(int, string) bool) {
+		next := fmt.Sprintf("https://hub.docker.com/v2/namespaces/%s/repositories/%s/tags?page_size=100", org, name)
+		for {
+			var tags []string
+			tags, next = getNameList(next)
+			for _, tag := range tags {
+				if !f(idx, fmt.Sprintf("%s/%s:%s", org, name, tag)) {
+					return
+				}
+				idx++
+			}
+			if next == "" {
+				return
+			}
+		}
+	}
+}
+
+func dockerOfficialImagesIterator() func(func(int, string) bool) {
 	idx := 0
 
 	return func(f func(int, string) bool) {
 		next := "https://hub.docker.com/v2/repositories/library/?page_size=100"
 		for {
 			var images []string
-			images, next = getImageList(next)
+			images, next = getNameList(next)
 			for _, image := range images {
-				if !f(idx, image) {
+				if !f(idx, image+":latest") {
 					return
 				}
 				idx++
@@ -218,7 +245,7 @@ func handlePanic() {
 	}
 }
 
-func getImageList(url string) ([]string, string) {
+func getNameList(url string) ([]string, string) {
 	rsp := getOrPanic(http.Get(url))
 	defer func() { _ = rsp.Body.Close() }()
 
@@ -227,13 +254,13 @@ func getImageList(url string) ([]string, string) {
 
 	next, _ := results["next"].(string)
 
-	var images []string
+	var names []string
 	for _, result := range results["results"].([]any) {
 		result := result.(map[string]any)
-		images = append(images, result["name"].(string))
+		names = append(names, result["name"].(string))
 	}
-	slices.Sort(images)
-	return images, next
+	slices.Sort(names)
+	return names, next
 }
 
 func run(command ...string) (string, error) {

@@ -1,0 +1,6 @@
+"IMAGE","FILE","TASK",ERROR"
+"anchore/test_images:sl-6","/usr/lib64/python2.6/distutils/command/wininst-6.0.exe","dotnet-portable-executable-cataloger","unable to find PE name in file"
+"anchore/test_images:sl-6","/usr/lib64/python2.6/distutils/command/wininst-7.1.exe","dotnet-portable-executable-cataloger","unable to find PE name in file"
+"anchore/test_images:sl-6","/usr/lib64/python2.6/distutils/command/wininst-8.0.exe","dotnet-portable-executable-cataloger","unable to find PE name in file"
+"anchore/test_images:sl-6","/usr/lib64/python2.6/distutils/command/wininst-9.0-amd64.exe","dotnet-portable-executable-cataloger","unable to find PE name in file"
+"anchore/test_images:sl-6","/usr/lib64/python2.6/distutils/command/wininst-9.0.exe","dotnet-portable-executable-cataloger","unable to find PE name in file"

@@ -1,0 +1,2 @@
+"IMAGE","FILE","TASK",ERROR"
+"anchore/test_images:npm-56d52bc","/usr/lib/node_modules/npm/node_modules/term-size/vendor/macos/term-size","cargo-auditable-binary-cataloger","rust cataloger: unable to read dependency information: unknown file format"

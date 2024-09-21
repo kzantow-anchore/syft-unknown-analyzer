@@ -1,0 +1,4 @@
+"IMAGE","FILE","TASK",ERROR"
+"anchore/test_images:sonarqube-5.6.7","/opt/sonarqube/lib/common/elasticsearch-1.7.5.jar","java-archive-cataloger","no package identified in archive"
+"anchore/test_images:sonarqube-5.6.7","/usr/local/bin/gosu","unknowns-labeler","no package identified in executable file"
+"anchore/test_images:sonarqube-5.6.7","/var/lib/dpkg/info/bash.preinst","unknowns-labeler","no package identified in executable file"

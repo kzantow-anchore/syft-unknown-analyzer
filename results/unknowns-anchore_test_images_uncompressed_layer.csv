@@ -1,0 +1,2 @@
+"IMAGE","FILE","TASK",ERROR"
+"anchore/test_images:uncompressed_layer","/var/lib/dpkg/info/bash.preinst","unknowns-labeler","no package identified in executable file"

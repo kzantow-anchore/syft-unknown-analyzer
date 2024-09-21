@@ -1,0 +1,2 @@
+"IMAGE","FILE","TASK",ERROR"
+"anchore/test_images:tomcat-10.0.0-M6-jdk8-corretto","/usr/local/tomcat/native-jni-lib/libtcnative-1.so.0.2.24","unknowns-labeler","no package identified in executable file"

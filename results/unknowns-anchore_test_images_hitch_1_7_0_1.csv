@@ -1,0 +1,2 @@
+"IMAGE","FILE","TASK",ERROR"
+"anchore/test_images:hitch-1.7.0-1","/var/lib/dpkg/info/bash.preinst","unknowns-labeler","no package identified in executable file"
