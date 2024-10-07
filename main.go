@@ -172,6 +172,9 @@ func escapeQuotedCsv(value string) string {
 }
 
 func imagesIterator() func(func(int, string) bool) {
+	if true {
+		return dockerOfficialImagesIterator()
+	}
 	return imagesTagsIterator("anchore", "test_images")
 }
 

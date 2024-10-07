@@ -5,7 +5,7 @@ go 1.23.0
 require (
 	github.com/anchore/go-logger v0.0.0-20230725134548-c21dafa1ec5a
 	github.com/anchore/go-sync v0.0.0-20240306205607-3ee6b614d624
-	github.com/anchore/syft v1.11.2-0.20240826140759-cf9bb13f2bfe
+	github.com/anchore/syft v1.13.1-0.20241007192134-4d7ed9f74924
 	github.com/glebarez/sqlite v1.11.0
 	golang.org/x/exp v0.0.0-20231108232855-2478ac86f678
 )
